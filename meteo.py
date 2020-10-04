@@ -2,8 +2,9 @@ __author__ = 'pckrator'
 import urllib.request
 import urllib.error
 import re
-import os.path, os
-import time
+import os.path
+import os
+
 
 
 url = "http://www.meteo.gr/rss/news.cfm"
@@ -19,12 +20,8 @@ def extact_date(st):
         date = date.split("/")
         date.reverse()
         date= "_".join(date)
-        #print(date)
-        return date
-    else:
-        return date
 
-
+    return date
 
 
 
@@ -55,21 +52,3 @@ else:
                     f.write(title+'\n'+forecast[0])
             except IOError as e:
                 print(e)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
