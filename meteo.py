@@ -1,4 +1,4 @@
-__author__ = 'pckrator'
+__author__ = 'tasakos'
 import urllib.request
 import urllib.error
 import re
