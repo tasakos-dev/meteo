@@ -31,10 +31,6 @@ if not os.path.isdir(forecast_dir):
     os.mkdir(forecast_dir)
 try:
     rss= requests.get(url).text
-    #req = urllib.request.Request(url)
-    #with urllib.request.urlopen(req) as response:
-        #char_set = response.headers.get_content_charset()
-        #rss = response.read().decode(char_set)
 except urllib.error.HTTPError as e:
     print('Σφάλμα HTTP:', e.code)
 except urllib.error.URLError as e:
